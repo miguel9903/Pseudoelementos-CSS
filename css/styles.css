@@ -1,0 +1,120 @@
+/* -------- General Styles -------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-title {
+    text-align: center;
+}
+
+/* Section Styles */
+
+.section {
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.price {
+    font-size: 4rem;
+}
+
+.price::before {
+    content: '$';
+    color: royalblue;
+}
+
+.price::after {
+    content: '.00';
+}
+
+
+.character {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.character__image {
+    width: 250px;
+}
+
+.dialog {
+    width: 70%;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    font-style: italic;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    position: relative;
+}
+
+.dialog::before {
+    content: '';
+    display: block;
+    border-top: 40px solid dodgerblue;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    bottom: -60px;
+    right: calc(50% - 20px);
+}
+
+.list {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.list__item {
+    margin-bottom: 10px;
+}
+
+.list__item::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid rebeccapurple;
+}
+
+.sphere {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle,black 10%, dodgerblue);
+    position: relative;
+}
+
+.sphere::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px black;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+
+}
