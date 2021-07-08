@@ -1,3 +1,20 @@
+/* Pseudoelementos after y before
+
+Pseudoelementos: Se utilizan para dar estilos a partes específicas de un elemento seleccionado
+
+Se llaman pseudoelementos porque permiten insertar contenido en la página, como si fueran elementos del 
+propio HTML, no obstante, no existen en el HTML y, por consecuencia, no existen en el DOM.
+
+Se pueden utilizar los pseudoelementos ::before y ::after para imprimir contendido o para utilizarlos 
+como “divs” vacíos y hacer todo tipo de diseños, adornos etc. 
+
+NOTA: La sintaxis para indicar los pseudoelementos requiere el uso de :: (dos puntos dobles). 
+Sin embargo, en navegadores muy antiguos se usaba solamente : Por ello, los navegadores siguen aceptando 
+usar : por temas de compatibilidad.
+
+
+*/
+
 /* -------- General Styles -------- */
 
 * {
