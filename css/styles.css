@@ -35,7 +35,9 @@ body {
     text-align: center;
 }
 
-/* Section Styles */
+
+/* ---- Section Styles ---- */
+
 
 .section {
     margin: 10px 20px;
@@ -43,6 +45,10 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+
+
+/* ---- Price Section Styles ---- */
+
 
 .price {
     font-size: 4rem;
@@ -56,6 +62,39 @@ body {
 .price::after {
     content: '.00';
 }
+
+
+/* ---- Tooltip Section Styles ---- */
+
+
+.tooltip {
+    display: inline-block;
+    font-weight: bold;
+    color: purple;
+    position: relative;
+}
+
+.tooltip::after {
+    width: 100%;
+    content: attr(data-content);
+    padding: 5px 15px;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    background: #566573;
+    border-radius: 5px;
+    position: absolute;
+    top: -180%;
+    left: -6%;
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+
+/* ---- Character Section Styles ---- */
 
 
 .character {
@@ -92,6 +131,10 @@ body {
     right: calc(50% - 20px);
 }
 
+
+/* ---- List Section Styles ---- */
+
+
 .list {
     list-style-type: none;
     margin: 20px;
@@ -110,6 +153,10 @@ body {
     border-bottom: 5px solid transparent;
     border-left: 5px solid rebeccapurple;
 }
+
+
+/* ---- Sphere Section Styles ---- */
+
 
 .sphere {
     margin: auto;
@@ -133,5 +180,57 @@ body {
     bottom: 0;
     left: 50%;
     z-index: -1;
-
 }
+
+
+/* ---- Image Section Styles ---- */
+
+
+.image-container {
+    width: 480px;
+    height: 328px;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid rebeccapurple;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-container::after {
+    content: 'Perritos tiernos';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 103, 123, 0.5);
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 328px;
+    color: #FFFFFF;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms;
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+
+.image-container:hover::after {
+    opacity: 1;
+    visibility: visible;
+    animation: move-left 500ms linear;
+}
+
+@keyframes move-left {
+    from {
+      left: -100%
+    }
+  
+    to {
+      left: 0%;
+    }
+  }
